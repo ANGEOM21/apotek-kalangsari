@@ -72,7 +72,7 @@ if (isset($_POST['login'])) {
 				<h3 class="text-center">Login</h3>
 				<?php if (isset($error)) : ?>
 					<p style="color: red;font-style: italic; float: right">Username / Password Salah!</p>
-					<p style="color: red;font-style: italic; float: right""><?php echo $message ?></p>
+					<p style="color: red;font-style: italic; float: right"><?php echo $message ?></p>
 				<?php endif; ?>
 				<div class="form-group">
 					<input type="text" name="username" class="form-control" value="admin" placeholder="Username" autocomplete="off" autofocus />
