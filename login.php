@@ -15,7 +15,7 @@ if (isset($_POST['login'])) {
 		// cek password
 		if (password_verify($pass, $row['password'])) {
 			$_SESSION['level'] = $row['level'];
-			header("Location: dashboard.php");
+			header("Location: index.php");
 			exit;
 		} else {
 			$error = true;

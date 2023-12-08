@@ -7,7 +7,7 @@ if (isset($_POST['register'])) {
     $pass = $_POST['password'];
     $re_pass = $_POST['repassword'];
     $nama = $_POST['nama_lengkap'];
-    $level = "user";
+    $level = "apoteker";
     // Melakukan hash password sebelum menyimpan ke database
     if ($pass !== $re_pass) {
         $error = true;
@@ -44,22 +44,36 @@ if (isset($_POST['register'])) {
     <link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <style type="text/css">
-        .kotak {
-            margin-top: 150px;
-            background-color: pink;
-            /*#AAE25E*/
-            color: #fff;
-        }
+        body {
+			background: rgb(28, 36, 0);
+		}
+		form{
+			min-height: 80vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .kotak .input-group {
-            margin-bottom: 20px;
-        }
+		.kotak {
+			padding: 10px 30px;
+			background: rgb(28, 36, 0);
+			background: linear-gradient(127deg, rgba(28, 36, 0, 1) 0%, rgba(71, 121, 9, 1) 31%, rgba(93, 137, 8, 1) 48%, rgba(149, 188, 16, 1) 75%, rgba(249, 255, 0, 1) 100%);
+			color: #fff;
+			border: 2px solid rgba(255, 255, 255, 0.5);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.kotak .input-group {
+			margin-bottom: 20px;
+		}
     </style>
 </head>
 
 <body>
     <form action="" method="post">
-        <div class="col-md-3 col-md-offset-4 kotak">
+        <div class="col-md-3  kotak">
             <h3 class="text-center">Registrasi</h3>
             <?php if (isset($error)): ?>
                 <p style="color: red;font-style: italic;">
@@ -87,8 +101,8 @@ if (isset($_POST['register'])) {
             </div>
             <br>
             <center>
-                <p>Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">kelompok apotek</a>
-                </p>
+                <p>Allready have account? <a href="login.php" title="login" target="_blank">Login</a></p>
+                <p>Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">kelompok apotek</a></p>
             </center>
         </div>
     </form>

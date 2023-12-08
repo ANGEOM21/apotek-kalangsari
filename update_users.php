@@ -8,8 +8,8 @@
     $id = $_GET['id'];
     $users = getData("SELECT * FROM users WHERE id = $id")[0];
     if (isset($_POST['update'])){
-        if (update($_POST) > 0) {
-            header("Location:users.php");
+        if (update_users($_POST) > 0) {
+            header("Location: users.php");
         }else {
             echo "<script>alert('Ada yang salah!!!');</script>";
         }

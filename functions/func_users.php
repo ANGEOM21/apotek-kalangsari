@@ -38,7 +38,7 @@
 	}
 
 	// update data
-	function update($data){
+	function update_users($data){
 		global $conn;
 		$id = $data['id'];
 		$nama_lengkap = htmlspecialchars($data['nama_lengkap']);

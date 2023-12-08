@@ -85,7 +85,7 @@ $jumlah = mysqli_fetch_assoc($res);
                 <ul class="nav">
                     <?php if ($_SESSION['level'] == 'apoteker' || $_SESSION['level'] == 'admin' || $_SESSION['level'] == 'pegawai' || $_SESSION['level'] == 'user') { ?>
                         <li class="active">
-                            <a href="dashboard.php">
+                            <a href="index.php">
                                 <i class="pe-7s-graph"></i>
                                 <p>Dashboard</p>
                             </a>
